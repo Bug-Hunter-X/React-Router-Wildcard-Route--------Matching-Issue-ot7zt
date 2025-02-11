@@ -1,0 +1,3 @@
+This repository demonstrates a common yet easily overlooked issue in React Router v6: the wildcard route ('/*').  When placed after more specific routes, it unexpectedly catches all paths, even those explicitly defined earlier. This can lead to a 'NotFound' component always rendering, masking other routes.
+
+The solution involves reordering routes to place the wildcard route at the very end of the route definitions within the `<Routes>` component. This ensures it only matches paths that haven't been handled by the more specific routes above it.
